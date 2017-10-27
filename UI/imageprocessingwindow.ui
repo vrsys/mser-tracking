@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ImageProcessingWindow</class>
+ <widget class="QMainWindow" name="ImageProcessingWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1226</width>
+    <height>836</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="gridLayout_all">
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0,3,0,1" columnstretch="1,2">
+    <property name="leftMargin">
+     <number>9</number>
+    </property>
+    <property name="rightMargin">
+     <number>9</number>
+    </property>
+    <item row="1" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_top" stretch="0,0,0">
+      <item>
+       <widget class="QLabel" name="labelImageName">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSaveImages">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>&amp;save</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_gerneral">
+      <item>
+       <widget class="QLabel" name="labelImage1">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Ignored" vsizetype="MinimumExpanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>246</width>
+          <height>171</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>2496</width>
+          <height>1716</height>
+         </size>
+        </property>
+        <property name="sizeIncrement">
+         <size>
+          <width>1</width>
+          <height>1</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>true</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Box</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>General Settings</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelFPS">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>0 FPS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="scrollArea_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>170</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>170</height>
+         </size>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>397</width>
+           <height>168</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="3" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>TUIO host</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="spinBoxCCThreshold">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>255</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="spinBoxLoopTimer">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximum">
+             <number>1000</number>
+            </property>
+            <property name="singleStep">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="labelCCThresholdText">
+            <property name="text">
+             <string>CC Threshold</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelLoopTimerText">
+            <property name="text">
+             <string>Loop Timer</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QCheckBox" name="checkBoxFastMode">
+            <property name="text">
+             <string>fast mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Expanding</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="textTUIOHost">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>localhost</string>
+            </property>
+            <property name="maxLength">
+             <number>20</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_calib">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_background" stretch="0,1,0">
+        <item>
+         <widget class="QLabel" name="labelBackgroundText">
+          <property name="text">
+           <string>Background Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelImage4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>123</width>
+            <height>86</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>624</width>
+            <height>429</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="buttonCaptureMin">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>capture</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_max" stretch="0,1,0">
+        <item>
+         <widget class="QLabel" name="labelMaxText">
+          <property name="text">
+           <string>Max Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelImage5">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>123</width>
+            <height>86</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>624</width>
+            <height>429</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="buttonCaptureMax">
+            <property name="text">
+             <string>capture</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buttonCreateMax">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="text">
+             <string>new</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayout_cluster_tracking" stretch="1,1">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_cluster" stretch="0,0,0">
+        <item>
+         <widget class="QLabel" name="labelImage2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>246</width>
+            <height>171</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>2496</width>
+            <height>1716</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>1</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Classification / Clustering</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>170</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>170</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>393</width>
+             <height>168</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="5" column="2">
+             <widget class="QLabel" name="labelClusteringSettings4">
+              <property name="text">
+               <string>finger: max size diff</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="labelClusteringSettings2_2">
+              <property name="text">
+               <string>finger: min parents</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="2">
+             <widget class="QLabel" name="labelClusteringSettings5">
+              <property name="text">
+               <string>hand: max size diff</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QSpinBox" name="spinBoxHandSizeDiff">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximum">
+               <number>1000</number>
+              </property>
+              <property name="value">
+               <number>400</number>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QDoubleSpinBox" name="spinBoxSizeDiff">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="decimals">
+               <number>0</number>
+              </property>
+              <property name="minimum">
+               <double>0.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>500.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>1.000000000000000</double>
+              </property>
+              <property name="value">
+               <double>10.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QSpinBox" name="spinBoxMinParents">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximum">
+               <number>10</number>
+              </property>
+              <property name="value">
+               <number>5</number>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QSpinBox" name="spinBoxLevel">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="maximum">
+               <number>255</number>
+              </property>
+              <property name="value">
+               <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="2">
+             <widget class="QLabel" name="labelClusteringSettings3">
+              <property name="text">
+               <string>finger: min level</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_tracking">
+        <item>
+         <widget class="QLabel" name="labelImage3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>246</width>
+            <height>171</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>2496</width>
+            <height>1716</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>1</width>
+            <height>1</height>
+           </size>
+          </property>
+          <property name="autoFillBackground">
+           <bool>true</bool>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Tracking</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>170</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>170</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>392</width>
+             <height>168</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout_pause">
+      <item>
+       <widget class="QPushButton" name="btnPauseResume">
+        <property name="text">
+         <string>&amp;pause</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnNextFrame">
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="text">
+         <string>&amp;next</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="1">
+     <widget class="QTextBrowser" name="textField"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1226</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuDevice">
+     <property name="title">
+      <string>Device</string>
+     </property>
+     <widget class="QMenu" name="menuCamera">
+      <property name="title">
+       <string>Camera</string>
+      </property>
+      <addaction name="actionGrasshopper"/>
+      <addaction name="actionOtherCam"/>
+     </widget>
+     <addaction name="actionImage_Stream"/>
+     <addaction name="actionVideo_File"/>
+     <addaction name="menuCamera"/>
+    </widget>
+    <addaction name="actionCalibrate"/>
+    <addaction name="menuDevice"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionCalibrate">
+   <property name="text">
+    <string>Calibrate</string>
+   </property>
+  </action>
+  <action name="actionImage_Stream">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Image Stream</string>
+   </property>
+  </action>
+  <action name="actionGrasshopper">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Grasshopper</string>
+   </property>
+  </action>
+  <action name="actionVideo_File">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Video File</string>
+   </property>
+  </action>
+  <action name="actionOtherCam">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Other</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

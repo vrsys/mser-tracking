@@ -1,0 +1,18 @@
+# Please specify the handmodel in cm
+ArmAreaMin 85
+ArmAreaMax 160
+HandAreaMin 10
+HandAreaMax 85
+FingerAreaMax 1
+FingerAreaMin 0.9
+H2A_DistanceMax 10
+H2H_DistanceMin 5
+F2H_DistanceMin 1
+F2H_DistanceMax 20
+F2F_DistanceMin .5
+F2F_DistanceMax 23
+F2F_AngleMin 1
+# Please specify the handmodel in seconds
+HandSpeedMaxPerS 500     #per second in cm
+HandRotationMaxPerS 400  #per second in angle
+BlobSpeedMaxPerS 300     #per second in cm

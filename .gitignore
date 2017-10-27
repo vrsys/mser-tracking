@@ -1,0 +1,54 @@
+## Gitignore for MSER-TRACKING
+# Temporary files
+*~
+*.tmp
+*.swp
+*.autosave
+
+# Vim session files
+*.vim
+
+# QTCreator files
+*.pro.user
+*.pro.user.*
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*.orig
+
+# Sublime files
+*.sublime-workspace
+
+# OS dependent files
+.DS_Store
+Thumbs.db
+desktop.ini
+.desktop
+
+# Other repositories
+.svn
+.cvs
+
+# Library files
+*.so
+*.a
+*.lib
+
+# Object files
+*.o
+
+# Build files
+build/
+
+# Executables
+mser-tracking
+Calibration_save
+
+# ImageFiles
+*.jpg
+*.png
+
+# data
+data/
+Data/

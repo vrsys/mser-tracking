@@ -1,0 +1,9 @@
+# Please specify the touchable size in cm
+TouchSizeX 113
+TouchSizeY 85 
+
+# Please specify classification / clustering parameter
+F_MinParents 10
+F_MaxSizeDiff 15
+F_MinLevel 10
+H_MaxSizeDiff 1000
